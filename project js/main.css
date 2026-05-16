@@ -1,0 +1,96 @@
+body{font-family: Arial, sans-serif;}
+footer a{text-decoration: none;}
+
+footer a:hover{color: #0d6efd !important;}
+
+.hero img{height: 450px;
+          object-fit: cover;}
+
+.card img{height: 250px;
+          object-fit: cover;
+}
+
+.our-story{background-color: #f8f9fa;}
+
+.our-story img{height: 400px;
+               object-fit: cover;}
+
+
+
+.shop-hero,.about-hero{background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=1400&auto=format&fit=crop");
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+            color: white;}
+
+.team-card img{height: 300px;
+               object-fit: cover;}
+
+.product-card{
+    transition: 0.3s;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.product-card:hover{
+    transform: translateY(-8px);
+}
+
+.product-card img{
+    height: 250px;
+
+    object-fit: cover;
+}
+
+.old-price{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.stock{
+    font-size: 14px;
+}
+
+.badge-custom{
+    z-index: 10;
+}
+.product-image{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.old-price{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.review-box{
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+.product-image { width: 100%; height: 500px; object-fit: cover; border-radius: 15px; }
+.old-price { text-decoration: line-through; color: gray; }
+
+.contact-hero{
+    height: 55vh;
+    background-image: url("https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?q=80&w=1200&auto=format&fit=crop");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.contact-hero .overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.contact-hero .content{
+    z-index: 2;
+}

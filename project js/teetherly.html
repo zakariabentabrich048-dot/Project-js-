@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="main.css">
+
+<title>Teetherly</title>
+
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold fs-3" href="teetherly.html">Teetherly</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+
+      <ul class="navbar-nav mx-auto text-center">
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="teetherly.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="shop.html">Shop</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="about.html">About Us </a>
+        </li>
+
+        <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Support
+    </a>
+
+    <!-- Everything you wanted is right here inside this dropdown menu -->
+      <ul class="dropdown-menu text-center">
+        <li>
+          <a class="dropdown-item" href="contactUs.html">Contact Us</a>
+        </li>
+                    <li><hr class="dropdown-divider"></li>
+
+        <li>
+          <a class="dropdown-item" href="/privacy.html">Privacy Policy</a>
+        </li>
+                    <li><hr class="dropdown-divider"></li>
+
+        <li>
+          <a class="dropdown-item" href="/terms.html">Terms & Policy</a>
+        </li>
+      </ul>
+    </li>
+    <!-- DROPDOWN END -->
+
+    </ul>
+  </ul>
+
+      <div class="d-flex align-items-center gap-3">
+
+        <form class="d-flex" onsubmit="search(event)">
+          <input class="form-control form-control-sm" type="search" placeholder="Search" id="searchInput">
+          <button type="submit" class="btn">
+            <i class="bi bi-search"></i>
+          </button>
+         
+        </form> 
+          <ul id="searchdisplay" class="list-group position-absolute top-100 start-80 w-45 shadow" style="z-index:999;">
+
+          </ul>  
+          
+
+        <a href="wishlist.html" class="text-dark fs-5 position-relative">
+          <i class="bi bi-heart"></i>
+  <span id="wishlistBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+
+        0
+
+  </span>
+
+        </a>
+
+        <a href="cart.html" class="text-dark fs-5 position-relative">
+
+          <i class="bi bi-cart"></i>
+
+          <span id="cartBadge"
+          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<button id="scrollTopBtn"
+class="btn btn-dark position-fixed bottom-0 end-0 m-4 rounded-circle shadow"
+style="display:none; z-index:999;">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<section class="container py-5 hero">
+  <div class="row align-items-center g-5">
+
+    <div class="col-lg-6">
+      <h1 class="fw-bold display-4">
+        Premium Baby Teething Products
+      </h1>
+
+      <h2 class="text-muted">
+        Safe, Stylish & Comfortable
+      </h2>
+
+      <p class="mt-3 lead">
+        Discover our collection of high-quality teething products designed for your baby's comfort and safety.
+        Loved by parents, trusted by babies.
+      </p>
+
+      <a href="shop.html" class="btn btn-dark mt-3 px-4 py-2">
+        Shop Now
+      </a>
+    </div>
+
+    <div class="col-lg-6 text-center">
+      <img
+      src="https://thumbs.dreamstime.com/b/super-kid-newborn-baby-little-hero-flying-sky-63057972.jpg"
+      class="img-fluid rounded-4 shadow"
+      alt="Baby">
+    </div>
+
+  </div>
+</section>
+
+<section class="container py-5">
+
+  <div class="text-center mb-5">
+    <h2 class="fw-bold">Featured Products</h2>
+    <p class="text-muted">
+      Explore our best teething products for your little one.
+    </p>
+  </div>
+
+  <div class="row g-4" id="Homeprod">
+  
+    
+  </div>
+</section>
+<section class="py-5 bg-white">
+
+  <div class="container text-center">
+
+    <h2 class="fw-bold mb-5">Our Values</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="p-4 shadow-sm rounded bg-light">
+          <i class="bi bi-shield-check fs-1 text-primary"></i>
+          <h5 class="mt-3">Safety First</h5>
+          <p class="text-muted">All products are tested and baby-safe.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 shadow-sm rounded bg-light">
+          <i class="bi bi-heart fs-1 text-danger"></i>
+          <h5 class="mt-3">Made with Love</h5>
+          <p class="text-muted">Designed with care for every baby.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 shadow-sm rounded bg-light">
+          <i class="bi bi-stars fs-1 text-warning"></i>
+          <h5 class="mt-3">High Quality</h5>
+          <p class="text-muted">Premium materials for long-lasting use.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="container py-5">
+
+  <div id="carouselExampleIndicators" class="carousel slide">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="0" class="active"></button>
+
+      <button type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="1"></button>
+    </div>
+
+    <div class="carousel-inner rounded-4 shadow">
+
+      <div class="carousel-item active">
+        <img src="image_660af1b5-ddb5-44a4-891d-789c44caa215-min.webp"
+        class="d-block w-100"
+        style="height:500px; object-fit:cover;"
+        alt="Slide 1">
+      </div>
+
+      <div class="carousel-item">
+        <img src="71-u0OvIyPL.jpg"
+        class="d-block w-100"
+        style="height:500px; object-fit:cover;"
+        alt="Slide 2">
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="prev">
+
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="next">
+
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+</section>
+
+<section class="our-story py-5">
+
+  <div class="container">
+
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6">
+        <img
+        src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?q=80&w=1200&auto=format&fit=crop"
+        class="img-fluid rounded-4 shadow"
+        alt="Our Story">
+      </div>
+
+      <div class="col-lg-6">
+
+        <h2 class="fw-bold mb-4">
+          Our Story
+        </h2>
+
+        <p class="text-muted">
+          At Teetherly, we believe every baby deserves comfort and care during their teething journey.
+          Our products are carefully crafted using baby-safe materials with modern and stylish designs.
+        </p>
+
+        <p class="text-muted">
+          Founded by parents who understand the importance of quality and safety,
+          Teetherly has become a trusted choice for families around the world.
+        </p>
+
+        <a href="about.html" class="btn btn-dark mt-3 px-4">
+          Learn More
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<footer class="bg-dark text-white pt-5 pb-3" id="mainfooter">
+
+  <div class="container">
+
+    <div class="row g-4">
+
+      <div class="col-lg-4">
+        <h3 class="fw-bold">Teetherly</h3>
+
+        <p class="text-light">
+          Premium teething products made with love, comfort, and safety for your baby.
+        </p>
+      </div>
+
+      <div class="col-lg-2 col-md-6">
+        <h5>Quick Links</h5>
+
+        <ul class="list-unstyled">
+
+          <li>
+            <a href="teetherly.html" class="text-light">Home</a>
+          </li>
+
+          <li>
+            <a href="shop.html" class="text-light">Shop</a>
+          </li>
+
+          <li>
+            <a href="about.html" class="text-light">About</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <h5>Support</h5>
+
+        <ul class="list-unstyled">
+
+          <li>
+            <a href="/cantactus.html" class="text-light">Contact Us</a>
+          </li>
+
+          <li>
+            <a href="/privacy.html" class="text-light">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="/terms.html" class="text-light">Terms & Conditions</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="col-lg-3">
+        <h5>Follow Us</h5>
+
+        <div class="d-flex gap-3 fs-4">
+
+          <a href="#" class="text-light">
+            <i class="bi bi-facebook"></i>
+          </a>
+
+          <a href="#" class="text-light">
+            <i class="bi bi-instagram"></i>
+          </a>
+
+          <a href="#" class="text-light">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+
+          <a href="#" class="text-light">
+            <i class="bi bi-pinterest"></i>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="border-secondary my-4">
+
+    <div class="text-center">
+      <p class="mb-0">
+        © 2026 Teetherly. All Rights Reserved.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="homeprod.js"></script>
+<script src="search.js"></script>
+<script src="updatecart.js"></script>
+<script src="wishlist.js"></script>
+<script src="main.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
