@@ -94,3 +94,12 @@ footer a:hover{color: #0d6efd !important;}
 .contact-hero .content{
     z-index: 2;
 }
+
+#mainfooter,
+#mainfooter p,
+#mainfooter a,
+#mainfooter li,
+#mainfooter h3,
+#mainfooter h5{
+    color: white !important;
+}
